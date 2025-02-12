@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>☼</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;600&display=swap');
+
+        body { 
+            background-image: url('https://i.imgur.com/OxnZfdC.jpeg'); 
+            background-size: cover; 
+            background-position: center; 
+            background-repeat: no-repeat; 
+            height: 100vh; 
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #e0aaff;
+            font-family: 'Playfair Display', serif;
+        }
+
+        #content {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+            max-width: 80%;
+        }
+
+        h1 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 48px;
+            color: #ff80ab;
+            margin-bottom: 10px;
+        }
+
+        #compliment {
+            font-size: 22px;
+            font-weight: 600;
+            color: #fceaff;
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 12px 24px;
+            font-size: 16px;
+            font-weight: 600;
+            background: linear-gradient(45deg, #9b5de5, #f15bb5);
+            color: #ffffff;
+            border: none;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: 0.3s;
+            box-shadow: 0 0 10px rgba(255, 128, 171, 0.5);
+        }
+
+        button:hover {
+            background: linear-gradient(45deg, #f15bb5, #ff70a6);
+            box-shadow: 0 0 15px rgba(241, 91, 181, 0.8);
+        }
+    </style>
+</head>
+<body>
+    <div id="content">
+        <h1>Greetings, Eléonore</h1>
+        <p id="compliment">Click the button for a compliment!</p>
+        <button onclick="giveCompliment()">Get Compliment</button>
+    </div>
+
+    <script>
+        const compliments = [
+            "You are absolutely wonderful!",
+            "The world is better with you in it.",
+            "You are stronger than you think.",
+            "Your kindness is inspiring!",
+            "You light up the room.",
+            "Your smile is contagious!",
+            "You are enough, just as you are.",
+            "Your laughter is contagious, no one can get enough of it.",
+            "That nose is a work of art. Its existence is a key figure in the invention of the word and feeling of beauty.",
+            "The face of a model, the mind of a maiden, the voice of a siren... I could keep going, but I don’t think it’s safe for my mind to continue XD.",
+            "Remember, everything in life has come to pass. Trust in yourself and let the bad times fade—you have the strength and heart to face any storm.",
+            "You are loved and wanted everywhere you go. No one in their right mind could hate you—remember that always!",
+            "Believe in your name. As the sun, you are the brightest and warmest person ever—never let anyone put you in doubt about that.",
+            "You are one day closer to your dreams! You got this.",
+            "You looking extra fine today! Like daaayuuum.",
+            "Girl, if you made wigs, people would shave their heads and pay anything just to have sweet hair like yours, fr 164%.",
+            "Yes, we are both mutually hating on the person that dared to attempt ruining your day. I shall grab my gun, and we shall dispose of them promptly.",
+            "I just looked up synonyms for 'Perfect.' Your name was the only thing on the list. Is the internet trying to flirt with you?¿",
+            "Hey, I got an idea—can you try NOT being amazing sometimes? 'Cause like, you know how some people don’t believe in the divine? Yeah, I kinda wanna mess with them, then tell them about you and watch their brains explode.",
+            "Beep boop beep beep bap boop. Damn, bro, got computers trying to flirt with her.",
+            "When I look at you, I understand the Asian stereotype. Like, STAHP being PERFECT ALL THE TIME—you make it look effortless, and it makes us other Asians look bad smh. Sincerely, the Asian Over-Accomplishers Association.",
+            "Can you sign my petition? It’s about suing your pillow and blankets for having more time with you than anyone else.",
+            "Baby Eli is peak Baby. Be proud!!",
+            "I was thinking to myself, and honestly, you have every reason to be proud and arrogant—but the fact that you’re humble is a true sign of character.",
+            "I have spread the word of The Church of Eli. We have acquired 69,420 new secret followers, preaching your name with the sole intention of acquiring all the happiness this world has to offer.",
+            "If life were an RPG, you’d be the secret legendary character with maxed-out stats.",
+            "Even on your worst days, you outshine 99% of the people on their best days.",
+            "You don’t just light up a room—you set the whole world on fire (in a good way, not an arsonist way or maybe like Klee hmmm).",
+            "Your presence alone makes the universe at least 164% cooler.",
+            "If vibes were currency, you'd be a billionaire (paid in stickers of course).",
+            "The only reason people stare at you is because they’re trying to figure out if angels are real.",
+            "Scientists are still trying to figure out how someone like you can exist. So far, no logical explanation.",
+            "You could take over the world if you wanted to, but I respect you for using your powers for good instead.",
+            "If charisma had a face, it would be yours.",
+            "Some people dream of meeting someone like you. Lucky for us, someone like you exists."
+        ];
+        
+        function giveCompliment() {
+            const randomIndex = Math.floor(Math.random() * compliments.length);
+            document.getElementById("compliment").innerText = compliments[randomIndex];
+        }
+    </script>
+</body>
+</html>
